@@ -17,4 +17,8 @@ public class ContactService {
     public List<Contact> getContacts() {
         return contacts;
     }
+
+    public void add(Contact contact) {
+        contacts.add(contact);
+    }
 }

@@ -2,10 +2,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
   <head>
-    <title>Contacts</title>
+    <title>Liste contacts</title>
   </head>
   <body>
-    <h2>Contacts</h2>
+    <h2>Liste contacts</h2>
     <ul>
       <c:forEach items="${contacts}" var="contact">
         <li>${contact.nom} : ${contact.telephone}</li>
