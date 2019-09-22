@@ -53,12 +53,7 @@ public class Ajoute extends HttpServlet {
 
         if (errors.size() == 0) {
             int number = service.add(new Contact(nom,tel));
-            request.getSession().setAttribute("number",number-1);
-            // dans jsp, récupérer number
-            // foreach debut -> number-1 : normal
-            //  number : en gras
-            // foreach number+1 -> end : normal
-            //  https://jakarta.ee/specifications/tags/1.2/tagdocs/
+            request.getSession().setAttribute("number",number);
             response.sendRedirect(request.getContextPath() + "/liste");
         } else {
             request.setAttribute("errors", errors);

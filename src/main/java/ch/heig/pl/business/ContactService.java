@@ -20,6 +20,6 @@ public class ContactService {
 
     synchronized public int add(Contact contact) {
         contacts.add(contact);
-        return contacts.size();
+        return contacts.size()-1;
     }
 }
