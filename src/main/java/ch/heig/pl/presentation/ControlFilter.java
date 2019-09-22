@@ -24,14 +24,10 @@ public class ControlFilter implements Filter {
             count++;
         }
         request.getSession().setAttribute("count",count);
-
         if (count > 10 ) {
             req.getRequestDispatcher("/WEB-INF/pages/limit.html").forward(request, resp);
         } else {
             chain.doFilter(req, resp);
         }
     }
-
-
-
 }

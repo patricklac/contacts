@@ -7,7 +7,7 @@
   <body>
     <h2>Ajoute contact</h2>
 
-    <form action="${pageContext.request.contextPath}/ajoute" method="post">
+    <form action="ajoute" method="post">
       <div id="nom">
       <label for="nom">nom</label>
       <input type="text" name="nom" value="${nom}">
