@@ -14,11 +14,12 @@ public class ContactService {
         contacts.add(new Contact("Sylvie",1111));
     }
 
-    public List<Contact> getContacts() {
+    synchronized public List<Contact> getContacts() {
         return contacts;
     }
 
-    public void add(Contact contact) {
+    synchronized public int add(Contact contact) {
         contacts.add(contact);
+        return contacts.size();
     }
 }
